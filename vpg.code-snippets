@@ -5,11 +5,14 @@
 	
 	"body": [
 		"<!DOCTYPE html>"
+		""
 		"<meta charset=UTF-8>"
 		"<title>Laboratorinis darbas</title>"
 		"<body><head>"
-		    "<u>ĄČĘĖĮŠŲŪ</u>"
-			"<h1><i>Justas Baranauskas</i></h1> "
+		    "<b>Lietuviškų raidžių patikra :</b>"
+			"<i>ąčęėįšųūĄČĘĖĮŠŲŪ</i>"
+			"<p><h1>Reikalinga informacija :</h1></p>"
+			"<h2><i>Justas Baranauskas</i></h2> "
 			"<b><p><i>EF22/1</i></p></b>"
 			"<u><b>Laboratorinis Nr. </b></u>"
 		"</head></body></html>"
