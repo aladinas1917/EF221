@@ -1,0 +1,18 @@
+{
+	"VPG": {
+	"scope": "html",
+	"prefix": "!vpg",
+	"body": [
+		"<!DOCTYPE html>"
+		"<title>Laboratorinis darbas</title>"
+		"<body><head>"
+			"<h1><i>Justas Baranauskas</i></h1> "
+			"<b><p><i>EF22/1</i></p></b>"
+			"<u><b>Laboratorinis Nr. </b></u>"
+		"</head></body></html>"
+		
+			"$2"
+	],
+	"description": "Snippet for vardas pavarde grupe"
+	}
+}
