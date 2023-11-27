@@ -12,13 +12,18 @@ a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
 h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
+    footer{
+        bottom: 0;
+        width: 100%;
 
+    }
  body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgba(101, 176, 160, 0.9);
     font-size: 16px;
     text-align: center;
     font-weight: normal;
+    position: relative;
  }
     header {
 
@@ -93,6 +98,7 @@ h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
     }
     .navbar {
         overflow: hidden;
+        position: -webkit-sticky;
         position: sticky;
         top:0;
         background-color: rgba(72, 152, 134, 0.9);;
@@ -114,6 +120,7 @@ h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
         background-color: rgba(23, 59, 51, 0.5);
         display: flex;
         flex-direction: row;
+        position: relative;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
@@ -166,8 +173,9 @@ h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
         background-color: rgba(0,0,0,0.8); 
         transform: scale(2);
         position: absolute;
-        top:37%;
-        right: 37%;
+        bottom: 50%;
+        z-index: 10;
+        left: 44%;
        }
       .kontaktup{
         font-size: 10px;
@@ -189,7 +197,7 @@ h1, h2, h3, h4, h5, h6{font-size: inherit;font-weight: 400;}
       }
       .meme:active{
         position: absolute;
-        top: 50%;
+        bottom: 100%;
         left: 50%;
         width: 100%;
         transform: scale(17);
@@ -380,13 +388,13 @@ video{
     align-self: stretch;
     max-height: 200px;
     max-width: 100%;
-    width: 600px;
+    width: 300px
 }
 .ytbvideo{
     align-self: stretch;
     margin:0 20px;
     max-width: 100%;
-    width: 600px;
+    width: 300px
 }
 
 .ytbvideoh, .ytbvideo1h{
