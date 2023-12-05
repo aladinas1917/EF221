@@ -639,3 +639,91 @@ video:hover, iframe:hover{
 .math{
     font-size: 20px;
 }
+
+.jssmathmlh{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.jssh{
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+.laikrodis{
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+.struktura{
+    height: 100px
+}
+svg{   
+    margin-right: 20px;
+    border-radius: 50%;
+    position: relative;
+    animation-name: circle;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes circle{
+    0%{
+        left:-40%
+        }
+    35%{
+        width: 50px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        height: 50px;
+        border-radius: 0;
+        transform: rotate3d(1, 1, 1, 45deg);
+        }
+    50%{
+        transform: scale(1.3);
+    }
+    65%{
+        width: 50px;
+        margin-top: 10px;
+        height: 50px;
+        border-radius: 0;
+        transform: rotate3d(1, -1, 1, -45deg);
+    }    
+        100%{
+        left: 40%
+        }
+}       
+
+
+.laikrodziobox{
+    display: inline-block;
+    outline: 2px solid rgb(73, 65, 65);
+    font-size: 14px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #8ca0b0;
+    padding: 6px 0;
+    transition: 0.5s;
+    width: 100px;
+}
+
+.laikrodziobox:hover{
+    transform: scale(1.3);
+}
