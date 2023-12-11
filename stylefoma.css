@@ -1,0 +1,71 @@
+.formajs label{
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+}
+.navbar{
+    margin-bottom: 10px;
+}
+.formajs p{
+    font-size: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 5px 0;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+.forminput{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 10px 0;
+    height: 3vh;
+    outline: 3px solid rgb(100, 100, 100);
+    color: black;
+    background-color: rgb(189, 203, 225);
+    padding: 8px 10px;
+    transition: 300ms linear;
+}
+.forminput:focus{
+    transform: scale(1.1);
+    background-color: rgb(216, 222, 231);
+    padding: 13px 12px;
+}
+
+footer{
+    margin-top: 10px;
+}
+.formbutton{
+    font-size: 16px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 3px 7px;
+    border-radius: 30px;
+    background-color: rgb(189, 203, 225);
+    outline: 3px solid rgb(100, 100, 100);
+    margin: 0 6px;
+    width: 20vh;
+}
+
+.formresults{
+    font-size: 12px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 15px 0;
+    color: white;
+    padding: 10px 10px;
+    border: 3px solid black;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+}
+.formresults p{
+    margin-top: 5px;
+}
+
+.spanasforma{
+    font-weight: 800;
+    font-style: italic;
+    color: rgb(215, 215, 215);
+    text-decoration: underline;
+}

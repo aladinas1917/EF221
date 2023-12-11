@@ -4,6 +4,7 @@
         <meta charset=UTF-8>
         <title>Test Website</title>
         <link rel="stylesheet" href="style5.css">
+        <link rel="stylesheet" href="stylefoma.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="format-detection" content="telephone=no">
         <meta name="description" content="Svetaine testuojama">
@@ -49,14 +50,43 @@
         </div>
         <div class="content">
             <div class="container">
-                <h2 class="infoapie">Informacija apie mane</h2>
-                <p class="infoapiep">Esu Justas Baranauskas, man yra 20 metų. Gimimo data : 2003.09.18.
-                    Hobiai : Krepšinis, kompiuteriai žaidimai, pokeris. Šiuo metu dirbu prie elektroninų cigarečių
-                    skysčių gamybos "RoyalSmoke" firmoje. Esu Vilnius Tech universiteto antro kurso studentas.</p>
-                    <h2 class="infoapie">Mano didžiausios paslaptys</h2>
-                <p class="infoapiep1">Nieko čia nebus :)</p>
+                <form class="formajs" action="/action_page.php" target="_blank" method="post" id="forma">
+                    <label class="formalabel" for="vardas"> Jūsų vardas </label> <br>
+                    <input type="text" class="forminput vardas" id="vardas" name="vardas" tabindex="1" placeholder="Vardas"> <br>
+                    <label class="formalabel" for="pavarde"> Jūsų pavardė </label> <br>
+                    <input type="text" class="forminput pavarde" id="pavarde" name="pavarde" tabindex="2" placeholder="Pavardė"> <br>
+                    <label class="formalabel" for="emailas"> Jūsų elektroninis paštas </label><br>
+                    <input type="email" class="forminput emailas" id="emailas" name="emailas" tabindex="3" placeholder="El. paštas"> <br>
+                    <label class="formalabel" for="telefonas">Jūsų telefono numeris</label> <br>
+                    <input type="tel" class="forminput telefonas" id="telefonas" name="telefonas" tabindex="4" placeholder="Tel. Numeris"> <br>
+                    <p>Jūsų adresas :</p>
+                    <label class="formalabel" for="salis"> Šalis </label> <br>
+                    <input type="text" class="forminput salis" id="salis" name="salis" tabindex="5" placeholder="Šalis"> <br>
+                    <label class="formalabel" for="miestas"> Miestas </label> <br>
+                    <input type="text" class="forminput miestas" id="miestas" name="miestas" tabindex="6" placeholder="Miestas"> <br>
+                    <label class="formalabel" for="gatve"> Gatvė </label> <br>
+                    <input type="text" class="forminput gatve" id="gatve" name="gatve" tabindex="7" placeholder="Gatvė"> <br>
+                    <label class="formalabel" for="namobutonumeris"> Namo - buto numeris </label> <br>
+                    <input type="text" class="forminput namobutonumeris" id="namobutonumeris" name="namobutonumeris" tabindex="8" placeholder="Namo - buto numeris"><br>
+                    <label class="formalabel" for="pastokodas"> Pašto kodas </label> <br>
+                    <input type="number" class="forminput pastokodas" id="pastokodas" name="pastokodas" tabindex="9" placeholder="Pašto kodas"><br>
+                    <label class="formalabel" for="gimimodata"> Gimimo data </label> <br>
+                    <input type="date" class="forminput gimimodata" id="gimimodata" name="gimimodata" tabindex="10"> <br>
+                    <label class="formalabel" for="mokykla"> Kelintais metais baigėte mokykla </label> <br>
+                    <input type="number" class="forminput mokykla" id="mokykla" name="mokykla" tabindex="11" placeholder="Kelintais metais?"> <br>
+                    <label class="formalabel" for="atlyginimas"> Kokio atlyginimo pageidautumėte ?</label> <br>
+                    <input type="number" class="forminput atlyginimas" id="atlyginimas" name="atlyginimas" tabindex="12" placeholder="Norimas atlyginimas"> <br>
+                    <label class="formalabel" for="atlyginimas1"> Koks buvo jūsų atlyginimas ?</label> <br>
+                    <input type="number" class="forminput atlyginimas1" id="atlyginimas1" name="atlyginimas1" tabindex="13" placeholder="Buvęs atlyginimas"> <br>
+                    <label class="formalabel" for="atlyginimas2"> Kokį atlyginimą galėtumete gauti žinodami savo žinias ?</label> <br>
+                    <input type="number" class="forminput atlyginimas2" id="atlyginimas2" name="atlyginimas2" tabindex="14" placeholder="Didžiausias atlyginimas"> <br>
+                    <button class="formbutton submit" id="formsubmitbutton" name="formsubmitbutton" type="submit"> Pateikti </button>
+                    <button class="formbutton reset" id="formresetbutton" name="formresetbutton" type="reset"> Atstatyti </button>
+                </form>
+                <div class="formresults" id="formResults"></div>
             </div>
         </div>
+        <script src="forma.js"></script>
         <footer id="pabaiga">
             <div class="content">
                 <div class="container">
