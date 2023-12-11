@@ -1,13 +1,10 @@
 // forma.js
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('forma');
   const formResultsDiv = document.getElementById('formResults');
-
   const duomenys = {};
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
-
     duomenys.vardas = form.querySelector('input[name="vardas"]').value;
     duomenys.pavarde = form.querySelector('input[name="pavarde"]').value;
     duomenys.emailas = form.querySelector('input[name="emailas"]').value;
@@ -22,12 +19,55 @@ document.addEventListener('DOMContentLoaded', function () {
     duomenys.atlyginimas = Number(form.querySelector('input[name="atlyginimas"]').value);
     duomenys.atlyginimas1 = Number(form.querySelector('input[name="atlyginimas1"]').value);
     duomenys.atlyginimas2 = Number(form.querySelector('input[name="atlyginimas2"]').value);
-
     let atlyginimoVidurkis = (duomenys.atlyginimas + duomenys.atlyginimas1 + duomenys.atlyginimas2) / 3;
-
     if (duomenys.atlyginimas1 === 0) {
       atlyginimoVidurkis = (duomenys.atlyginimas + duomenys.atlyginimas2) / 2;
+
+      let emailasyr = '0';
+      let telefonasyr = '0';
+      let adresasyr = '0';
+      
+      if (!duomenys.emailas.includes('@') || !duomenys.emailas.includes('.')) {
+        console.log('Netinkamas el. pašto formatas');
+        emailasyr = '1';
     }
+      
+      if (duomenys.telefonas.length !== 12) {
+          console.log('Telefono numeris netinkamas');
+          telefonasyr = '1';
+      }
+      
+      if (!duomenys.salis || !duomenys.miestas || !duomenys.gatve || !duomenys.namobutonumeris || !duomenys.pastokodas) {
+          console.log('Netinkamas adreso formatas');
+          adresasyr = '1';
+      }
+      
+      if (adresasyr === '1' && emailasyr === '1' && telefonasyr === '1') {
+          alert("Netinkamas telefono numeris, adresas ir elektroninis paštas");
+          return;
+      } else if (adresasyr === '1' && emailasyr === '1') {
+          alert("Netinkamas adresas ir elektroninis paštas");
+          return;
+      } else if (emailasyr === '1' && telefonasyr === '1'){
+          alert("Netinkamas elektronins paštas ir telefono numeris");
+          return;
+      } else if (adresasyr === '1' && telefonasyr === '1'){
+          alert("Netinkamas adresas ir telefono numeris");
+          return;
+      } else if (adresasyr === '1'){
+          alert("Netinkamas adresas");
+          return;
+      } else if(emailasyr === '1'){
+          alert("Netinkamas elektroninis paštas");
+          return;
+        } else if (telefonasyr === '1'){
+          alert("Netinkamas telefono numeris");
+          return;
+        }
+      
+      duomenys.adresas = `${duomenys.salis}, ${duomenys.miestas}, ${duomenys.gatve} ${duomenys.namobutonumeris}, ${duomenys.pastokodas}`;
+    }
+
 
     atlyginimoVidurkis = Math.round(atlyginimoVidurkis, 2);
 
@@ -41,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Preaitas atlyginimas:', duomenys.atlyginimas);
     console.log('Didžiausias atlyginimas:', duomenys.atlyginimas);
 
-    Adresas = (duomenys.salis + ', ' + duomenys.miestas + ', ' + duomenys.gatve + ' ' + duomenys.namobutonumeris + ', ' + duomenys.pastokodas)
+    Adresas = (duomenys.salis + ', ' + duomenys.miestas + ', ' + duomenys.gatve + ' ' + duomenys.namobutonumeris + ', ' + duomenys.pastokodas);
     console.log('Adresas: ', Adresas);
 
     form.reset();
@@ -58,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <p><span class="spanasforma">Didžiausias atlyginimas</span>: ${duomenys.atlyginimas2}</p>
       <p><span class="spanasforma">Adresas</span>: ${Adresas}</p>
       <br><br>
-      <p><span class="spanasforma">Duomenys</span>: ${duomenys.vardas} ${duomenys.pavarde} (${duomenys.emailas}) : ${atlyginimoVidurkis} $</p>
+      <p><span class="spanasforma">Duomenys</span>: <span class=raudona>${duomenys.vardas} ${duomenys.pavarde}</span> <span class=oranzine>(${duomenys.emailas})</span> : <span class=zalia>${atlyginimoVidurkis} $</span></p>
     `;
   });
 });

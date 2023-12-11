@@ -50,7 +50,7 @@
         </div>
         <div class="content">
             <div class="container">
-                <form class="formajs" action="/action_page.php" target="_blank" method="post" id="forma">
+                <form class="formajs" target="_blank" method="post" id="forma">
                     <label class="formalabel" for="vardas"> Jūsų vardas </label> <br>
                     <input type="text" class="forminput vardas" id="vardas" name="vardas" tabindex="1" placeholder="Vardas"> <br>
                     <label class="formalabel" for="pavarde"> Jūsų pavardė </label> <br>
@@ -58,7 +58,7 @@
                     <label class="formalabel" for="emailas"> Jūsų elektroninis paštas </label><br>
                     <input type="email" class="forminput emailas" id="emailas" name="emailas" tabindex="3" placeholder="El. paštas"> <br>
                     <label class="formalabel" for="telefonas">Jūsų telefono numeris</label> <br>
-                    <input type="tel" class="forminput telefonas" id="telefonas" name="telefonas" tabindex="4" placeholder="Tel. Numeris"> <br>
+                    <input type="tel" class="forminput telefonas" value="+370" id="telefonas" name="telefonas" tabindex="4" placeholder="Tel. Numeris"> <br>
                     <p>Jūsų adresas :</p>
                     <label class="formalabel" for="salis"> Šalis </label> <br>
                     <input type="text" class="forminput salis" id="salis" name="salis" tabindex="5" placeholder="Šalis"> <br>
@@ -86,6 +86,7 @@
                 <div class="formresults" id="formResults"></div>
             </div>
         </div>
+
         <script src="forma.js"></script>
         <footer id="pabaiga">
             <div class="content">
